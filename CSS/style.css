@@ -1,0 +1,185 @@
+/* here i call inverse to handle the page */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/3bad-shams.jpg") no-repeat center center/cover;
+}
+
+.container .todo-app{
+    width: 100%;
+    max-width: 540px;
+    padding: 40px 30px 70px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(15px);
+}
+
+.todo-app h2{
+    color: #080808;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todo-app_input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent; 
+    padding: 10px; 
+}
+
+input::placeholder{
+    color: #fff;  
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 41px;
+    background-color: #096126;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: url("../assets/unchacked.jpg") no-repeat center center/cover;
+    top : 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: #fff;
+}
+
+ul li.checked::before{
+    background: url("../assets/chacked.jpg") no-repeat center center/cover;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 19px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #096126;
+    color: #fff;
+}
+
+
+/* Adjustments for smaller screens like mobile phones */
+@media (max-width: 768px) {
+    .container .todo-app {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .todo-app h2 {
+        font-size: 2em;
+    }
+
+    .todo-app_input {
+        flex-direction: column;
+        padding-left: 0px;
+    }
+
+    .todo-app_input button {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .todo-app input::placeholder{
+        text-align: center;
+    }
+}
+
+/* Additional adjustments for very small screens (e.g., phones in portrait mode) */
+@media (max-width: 480px) {
+    .container .todo-app {
+        padding: 12px;
+    }
+
+    .todo-app h2 {
+        font-size: 1.5em;
+    }
+
+    .todo-app_input {
+        padding-left: 0px;
+    }
+
+    .todo-app_input button {
+        padding: 12px;
+    }
+}
+
+.container {
+    background: url("../assets/3bad-shams.jpg") no-repeat center center/cover;
+    background-size: cover;
+}
+
+.todo-app h2 {
+    font-size: 2.5em; /* Base size */
+}
+
+@media (max-width: 768px) {
+    .todo-app h2 {
+        font-size: 2em; /* Smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-app h2 {
+        font-size: 1.5em; /* Very small screens */
+    }
+}
+
