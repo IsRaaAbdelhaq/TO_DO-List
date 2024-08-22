@@ -27,6 +27,12 @@ List.addEventListener("click", function(e){
     }
 }, false);
 
+TodoInput.addEventListener("keypress", function(e){
+    if(e.key === 'Enter'){
+        addTask();
+    }
+}, false);
+
 function save_data(){
     localStorage.setItem("data", List.innerHTML);
 }
